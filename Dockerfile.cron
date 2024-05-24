@@ -1,0 +1,10 @@
+FROM python:3.9
+
+# Copy the cron job script and any related files
+COPY cronjob.sh /app/cronjob.sh
+
+# Give execution permissions to the cron job script
+RUN chmod +x /app/cronjob.sh
+
+# Start the cron job
+CMD ["/app/cronjob.sh"]
